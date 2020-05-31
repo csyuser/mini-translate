@@ -1,0 +1,13 @@
+<!--logs.wxml-->
+<scroll-view scroll-y class="container">
+  <view class="history-list">
+      <view class="nav">
+        <view class="title">翻译历史</view>
+        <view class="iconfont icon-delete" bindtap="deleteHistory"></view>
+      </view>
+      <view class="item" wx:for="{{history}}" wx:key="index" bindtap="onTapHistory" data-query="{{item.query}}" data-translation="{{item.translation}}" data-currentLang="{{item.langSelect}}">
+      <view class="query">{{item.query}}</view>
+        <view class="translation">{{item.translation}}</view>
+      </view>
+  </view>
+</scroll-view>

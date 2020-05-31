@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/history/history",
+    "pages/change/change"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1c1b21",
+    "navigationBarTitleText": "甜瓜翻译",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#1c1b21",
+    "selectedColor": "#000000",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "翻译",
+        "iconPath":"images/translate.png",
+        "selectedIconPath":"images/translateSel.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史",
+        "iconPath": "images/history.png",
+        "selectedIconPath": "images/historySel.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

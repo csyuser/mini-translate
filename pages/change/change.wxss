@@ -1,0 +1,34 @@
+/* pages/change/change.wxss */
+
+.container {
+  background: #f8f8f8;
+}
+
+.lang-choice {
+  background-color: #fff;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #aaa;
+  padding: 20rpx 40rpx;
+  border-bottom: 1px solid #ececec;
+}
+
+.lang-list {
+  padding-left:40rpx;
+}
+
+.inner-list {
+  border-top: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 40rpx 20rpx 0;
+}
+.iconfont{
+  color: #aaa;
+}
+.lang-list:nth-child(2) .inner-list{
+  border-top: none;
+}

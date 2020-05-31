@@ -1,0 +1,12 @@
+<!--pages/change/change.wxml-->
+<view class="container">
+  <view class="lang-choice">
+    <view class="title">翻译成</view>
+    <view class="lang-list" bindtap="selectedLang" data-index="{{item.index}}" data-chs="{{item.chs}}" data-lang="{{item.lang}}" wx:for="{{langList}}" wx:key="index">
+      <view class="inner-list">
+        <view class="lang">{{item.chs}}</view>
+        <view class="iconfont icon-selected" wx:if="{{index===currentLang.index}}"></view>
+      </view>
+    </view>
+  </view>
+</view>
