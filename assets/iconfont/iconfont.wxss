@@ -1,6 +1,6 @@
 @font-face{
   font-family: "iconfont";
-  src:url('https://at.alicdn.com/t/font_1846280_90sgyjhjnu.ttf?t=1590720469944') format('truetype')
+  src:url('https://at.alicdn.com/t/font_1846280_bz37ql5t81p.ttf?t=1594630062025') format('truetype')
 }
 
 .iconfont {
@@ -24,4 +24,10 @@
 }
 .icon-selected:before {
   content: "\e613";
+}
+.icon-love:before {
+  content: "\e600";
+}
+.icon-shoucang:before {
+  content: "\e601";
 }

@@ -1,9 +1,9 @@
 //logs.js
-const util = require('../../utils/util.js')
 
 Page({
   data: {
-    history: []
+    history: [],
+    placeholder:'暂无翻译历史'
   },
   onShow: function() {
     this.setData({'history': wx.getStorageSync('history')})
@@ -14,8 +14,30 @@ Page({
     })
     
   },
+//清空历史
   deleteHistory:function(){
-    wx.setStorageSync('history', [])
-    this.setData({ 'history': wx.getStorageSync('history') })
+    const _this = this
+    wx.showModal({
+      title: '提示',
+      content: '确定清空历史记录？',
+      success(res) {
+        if (res.confirm) {
+          wx.setStorageSync('history', [])
+          _this.setData({ 'history': wx.getStorageSync('history') })
+          wx.showToast({
+            title: '删除成功',
+            icon: 'success',
+            duration: 2000
+          })
+        } else if (res.cancel) {
+          wx.showToast({
+            title: '取消删除',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }
+    })
+    
   }
 })

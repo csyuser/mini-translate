@@ -1,24 +1,47 @@
+.container{
+position: relative;
+}
+.container .placeholder{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  color: #8995a1;
+}
+
 .history-list {
   padding: 40rpx;
 }
-.history-list .nav{
+
+.history-list .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #8995a1;
 }
+
 .history-list .nav .title {
   font-size: 26rpx;
 }
+
 .history-list .nav .icon-delete {
   font-size: 40rpx;
 }
-.history-list .item{
-  padding-top:40rpx
+
+.history-list .item {
+  padding-top: 40rpx;
 }
-.history-list .item .langWrap .query{
-  color: #8995a1;
+
+.history-list .item .query {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.history-list .item .translation{
+
+.history-list .item .translation {
   padding-top: 16rpx;
+  color: #8995a1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

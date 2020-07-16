@@ -9,15 +9,18 @@
     </navigator>
   </view>
   <view class="input-area">
-    <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap="inputClear" ></text>
+    <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap="inputClear"></text>
     <view class="textarea-wrap">
       <textarea placeholder="请输入要翻译的文本" placeholder-style="color:#8995a1" value="{{query}}" bindinput='onInput' bindconfirm='onConfirm'></textarea>
     </view>
     <button class="translateButton" size="mini" hover-class="button-hover" hidden="{{hideClearIcon}}" bindtap="onConfirm">点击翻译</button>
   </view>
   <view class="result-area">
-    <view class="result-title">译文</view>
-    <view class="result-text" wx:for="{{result}}" wx:key="index" >
+    <view class="result-title">
+      <span>译文</span>
+      <text class="iconfont icon-shoucang {{isLove?'love':''}}" hidden="{{hideLoveIcon}}" bindtap="addLove"></text>
+    </view>
+    <view class="result-text" wx:for="{{result}}" wx:key="index">
       <text>{{item.dst}}</text>
     </view>
   </view>

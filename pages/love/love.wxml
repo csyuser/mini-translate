@@ -1,0 +1,19 @@
+<!--pages/love/love.wxml-->
+<scroll-view scroll-y class="container">
+  <view wx:if="{{loveList.length<=0}}" class="placeholder">{{placeholder}}</view>
+  <view class="loveList-wrap">
+    <view class="nav">总共收藏 {{length}} 个单词</view>
+    <view class="loveList" wx:for="{{loveList}}" wx:key="index">
+      <view class="title">
+        {{item.title}}
+      </view>
+      <view wx:for="{{item.datails}}" wx:for-item="twodata" wx:key="id" class="content">
+        <view class="query-content" bindtap="onTapLove" data-query="{{twodata.query}}" data-translation="{{twodata.translation}}" data-currentLang="{{twodata.langSelect}}" data-isLove="{{twodata.isLove}}">
+          <span class="query">{{twodata.query}}</span>
+          <view class="translation">{{twodata.translation}}</view>
+        </view>
+        <button size="mini" hover-class="button-hover" class="delButton" data-loveId="{{twodata.id}}" bindtap="changeLove">删除</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>

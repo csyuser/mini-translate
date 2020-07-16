@@ -32,9 +32,9 @@
  position: absolute;
   right: 12rpx;
   bottom: 20rpx;
-  font-size: 24rpx;
+  font-size: 30rpx;
   color: #888;
-  font-weight: 300
+  font-weight: 300;
 }
 
 .input-area .icon-close {
@@ -45,6 +45,7 @@
   color: #888;
 }
 
+
 .result-area{
 background: #fff;
 min-height: 80rpx;
@@ -52,7 +53,17 @@ padding: 40rpx;
 }
 .result-area .result-title{
   color: #8995a1;
-  font-size: 28rpx
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between
+}
+.result-area .result-title .icon-shoucang{
+  color: #cdcdcd;
+  padding-left: 20rpx;
+  font-size: 40rpx;
+}
+.result-area .result-title .love{
+  color: #d20a0a;
 }
 .result-area .result-text{
   padding: 20rpx;

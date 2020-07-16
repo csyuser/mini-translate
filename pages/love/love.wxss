@@ -1,0 +1,71 @@
+/* pages/love/love.wxss */
+.container{
+  position: relative;
+  background: #ffffff;
+}
+.container .placeholder{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  color: #8995a1;
+}
+.loveList-wrap {
+  /* padding: 20rpx; */
+}
+.loveList-wrap .nav  {
+  justify-content: space-between;
+  align-items: center;
+  color: #8995a1;
+  font-size: 26rpx;
+  background: #f5fafe;
+  padding: 20rpx 40rpx;
+}
+
+.loveList-wrap .loveList {
+  padding: 40rpx 20rpx 20rpx 20rpx;
+}
+
+.loveList-wrap .loveList .title {
+  border-bottom: 1rpx solid #c7cee0;
+  padding-bottom: 8rpx;
+  color: #8995a1;
+}
+
+.loveList-wrap .loveList .content {
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loveList-wrap .loveList .content .delButton {
+  font-size: 30rpx;
+  color: #888;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.loveList-wrap .loveList .content .query-content {
+  display: flex;
+  width: calc(100% - 120rpx);
+  /* font-size: 30rpx; */
+}
+
+.loveList-wrap .loveList .content .query-content .translation {
+  color: #8995a1;
+  margin-left: 20rpx;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 70%;
+}
+
+.loveList-wrap .loveList .content .query-content .query {
+  color: #333;
+  font-weight: 600;
+  width: 30%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
