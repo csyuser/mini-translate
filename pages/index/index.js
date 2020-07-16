@@ -13,6 +13,7 @@ Page({
     hideLoveIcon: true,
     isLove: false,
     translation: '',
+    isLoved:false,
   },
   onLoad: function(options) {
     if (options) {
@@ -79,6 +80,7 @@ Page({
       'hideLoveIcon': true,
       'query': '',
       'isLove': false,
+      'translation':'',
       result: []
     })
   },
@@ -86,9 +88,12 @@ Page({
   onInput: function(e) {
     this.setData({
       'query': e.detail.value,
+      translation:'',
       result: []
     })
+    this.alreadyLoved()
     this.clearIcon()
+    this.loveIcon()
   },
   //点击翻译按钮翻译
   onConfirm: function() {
@@ -145,6 +150,7 @@ Page({
   },
 //判断是否已经收藏
   alreadyLoved(){
+    this.setData({ 'isLove': false })
     const loveList = wx.getStorageSync('love')
     loveList.map(item => {
       if (this.data.query === item.query && this.data.currentLang.index === item.langSelect.index) {
