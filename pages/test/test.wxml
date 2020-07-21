@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+<button class="mini-btn" type="primary" size="mini">按钮</button>
+<button class="mini-btn" type="default" size="mini">按钮</button>
+<button class="mini-btn" type="warn" size="mini">按钮</button>

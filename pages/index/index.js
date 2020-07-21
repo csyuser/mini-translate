@@ -13,7 +13,7 @@ Page({
     hideLoveIcon: true,
     isLove: false,
     translation: '',
-    isLoved:false,
+    isLoved: false,
   },
   onLoad: function(options) {
     if (options) {
@@ -28,8 +28,8 @@ Page({
         }
       })
       this.setData({
-        'query': options.query ? options.query:'',
-        'translation': options.translation ? options.translation:'',
+        'query': options.query ? options.query : '',
+        'translation': options.translation ? options.translation : '',
         'isLove': options.isLove === 'true' ? true : false,
       })
       this.setData({
@@ -80,7 +80,7 @@ Page({
       'hideLoveIcon': true,
       'query': '',
       'isLove': false,
-      'translation':'',
+      'translation': '',
       result: []
     })
   },
@@ -88,7 +88,7 @@ Page({
   onInput: function(e) {
     this.setData({
       'query': e.detail.value,
-      translation:'',
+      translation: '',
       result: []
     })
     this.alreadyLoved()
@@ -97,10 +97,11 @@ Page({
   },
   //点击翻译按钮翻译
   onConfirm: function() {
+    if (!this.data.query) return
+
     wx.showLoading({
       title: '正在翻译',
     })
-    if (!this.data.query) return
 
     translate.translate(this.data.query, {
       from: 'auto',
@@ -148,13 +149,17 @@ Page({
     })
     wx.setStorageSync('love', love.filter(item => item.isLove === true))
   },
-//判断是否已经收藏
-  alreadyLoved(){
-    this.setData({ 'isLove': false })
+  //判断是否已经收藏
+  alreadyLoved() {
+    this.setData({
+      'isLove': false
+    })
     const loveList = wx.getStorageSync('love')
     loveList.map(item => {
       if (this.data.query === item.query && this.data.currentLang.index === item.langSelect.index) {
-        this.setData({'isLove':true})
+        this.setData({
+          'isLove': true
+        })
       }
     })
   },
@@ -174,7 +179,7 @@ Page({
       })
     } else {
       this.setData({
-        'isLove':true
+        'isLove': true
       })
       this.saveLove()
     }

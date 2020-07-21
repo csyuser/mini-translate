@@ -9,7 +9,7 @@
 }
 
 .change .icon-drop {
-  font-size: 20rpx;
+  font-size: 26rpx;
   color: #8995a1;
 }
 
@@ -28,21 +28,18 @@
   box-sizing: border-box;
   margin: 0;
 }
-.input-area .translateButton {
- position: absolute;
-  right: 12rpx;
-  bottom: 20rpx;
-  font-size: 30rpx;
-  color: #888;
-  font-weight: 300;
+.input-area .trans-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.input-area .trans-wrap .translateButton {
+  margin: 10rpx 12rpx;
 }
 
 .input-area .icon-close {
   position: absolute;
-  right: 12rpx;
+  right: 14rpx;
   top: 20rpx;
-  font-size: 40rpx;
-  color: #888;
 }
 
 

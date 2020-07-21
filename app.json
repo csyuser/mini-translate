@@ -34,9 +34,7 @@
         "iconPath": "images/history.png",
         "selectedIconPath": "images/historySel.png"
       }
-      
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
